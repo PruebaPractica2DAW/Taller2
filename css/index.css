@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+fieldset {
+    background-color: #eeeeee;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+#factura {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+table {
+    width: 60%;
+}
+
+#factura {
+    display: none;
+    text-align: center;
+    margin-top: 50px;
+}
