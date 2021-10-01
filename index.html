@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="shortcut icon" type="img/x-icon" href="img/logo.png">
+    <title>Pollos SV</title>
+</head>
+
+<body>
+    <header id="box">
+        <img src="img/logo.png" alt="logo">
+    </header>
+    <form action="javascript:void(0);" class="demoForm" id="pedidoForm">
+        <fieldset>
+            <legend>Combos e ingredientes adicionales</legend>
+            <!--Combos-->
+            <p>Combo: <br>
+                <label>Cantidad de combos:<input id="cantidadC" type="text" name="cantidadC" value="1" /></label><br>
+                <label><input id="combo" type="radio" name="combos" value="7.25" checked="checked" />Super Combo - (tres
+                    piezas de pollo, ensalada, papas fritas y bebida grande de su elección)</label><br>
+                <label><input id="combo" type="radio" name="combos" value="5.75" />Combo Personal - (dos piezas de
+                    pollo, papa frita y bebida mediana)</label><br>
+                <label><input id="combo" type="radio" name="combos" value="3.50" />Combo Infantil - (1 pieza de pollo,
+                    papas fritas y una bebida pequeña)</label>
+                <input type="hidden" name="total_combos" value="0.00" /><br>
+            </p>
+            <!--Ingredientes adicionales-->
+            <p id="ingredientesAd"><label>Ingredientes Adicionales:</label><br>
+                <label><input class="checks" type="checkbox" name="ensalada" value="1.50" />Ensalada</label><br>
+                <label><input class="checks" type="checkbox" name="papas" value="1.25" />Papas Fritas</label><br>
+                <label><input class="checks" type="checkbox" name="polloG olives" value="1.75" />Pieza de pollo
+                    grande</label><br>
+                <label><input type="checkbox" name="polloM" value="1.50" />Pieza de pollo mediana</label><br>
+                <label><input type="checkbox" name="polloP" value="1.25" />Pieza de pollo pequeña</label><br>
+                <label><input type="checkbox" name="bebidaG" value="1.50" />Bebida grande</label><br>
+                <label><input type="checkbox" name="bebidaM" value="1.25" />Bebida mediana</label><br>
+                <label><input type="checkbox" name="bebidaP" value="1.00" />Bebida Pequeña</label><br>
+                <label><input type="checkbox" name="cafe" value="0.50" />Café</label><br>
+                <label><input type="checkbox" name="postre" value="1.25" />Postre</label>
+                <input type="hidden" name="total_ing" value="0.00" /><br>
+                <label>Cantidad de ingredientes adicionales:<input id="cantidadIng" type="text" name="cantIng"
+                        value="1" /></label><br>
+            </p>
+
+            <!--Guardar un comentario-->
+            <hr>
+            <div id="wrap">
+                <h5>Déjanos tus sugerencias o comentarios sobre tu orden</h5>
+                <div id='form_wrap'>
+                    <form id="contact-form" action="javascript:alert('¡Comentario enviado!');">
+                        <p id="formstatus"></p>
+                        <p>
+                            Instrucciones: Presione Ctrl+E o dar un clic para dejar su comentario y Ctrl+S para guardar
+                            su comentario.
+                        </p>
+                        <label for="email">Tu mensaje: </label>
+                        <div id="view"></div>
+                        <br>
+                        <textarea name="message" id="area" value="Tu mensaje" id="message"></textarea>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <!--Total del pedido-->
+
+            <p>
+                <label>
+                    Total: $<input type="text" name="total" class="num" value="0.00" readonly="readonly" />
+                </label>
+            </p>
+            <p>
+                <input class="btn btn-dark" type="submit" name="submit" value="Realizar pedido" onclick="factura()" />
+            </p>
+
+        </fieldset>
+    </form>
+
+    <div class="table" id="factura">
+        
+    </div>
+
+    <script src="js/pedido.js"></script>
+    <script src="js/mensaje.js"></script>
+</body>
+
+</html>
